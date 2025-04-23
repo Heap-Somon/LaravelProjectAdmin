@@ -9,8 +9,8 @@
     @endsection
 
     <div class="container-xxl flex-grow-1 container-p-y">
-        <div class="card">
-          <div class="table-responsive text-nowrap">
+        <div class="card" id="card">
+          <div class="table-responsive text-nowrap" id="table">
             <table class="table">
               <thead>
                 <tr>
@@ -25,7 +25,7 @@
               <tbody class="table-border-bottom-0">
                 @foreach ($news as $new)         
                     <tr>
-                    <td>{{ $new->title}}  </td>
+                    <td class="text-truncate" style="max-width: 200px;">{{ $new->title}}  </td>
                     <td>
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                         <img src="https://127.0.0.1/products/{{ $new->thumbnail }}" alt="Avatar" class="rounded-circle" 
@@ -45,7 +45,7 @@
                         </ul>
                     </td>
                     
-                    <td>{{ $new-> description }}</td>
+                    <td class="text-truncate" style="max-width: 200px;">{{ $new-> description }}</td>
                     <td>{{ $new->viewers }}</td>
                     <td>
                         <div class="dropdown">
